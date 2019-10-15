@@ -1,0 +1,21 @@
+[server_config]
+master=ip1:3306
+w-hostgroupid=3
+w-weight=3
+w-user=god
+w-password=god
+w-comment= 写库
+slave=ip1:3306,ip2:3306,ip3:3306
+r-hostgroupid=5
+r-weight=5
+r-comment= 读库
+max_replication_lag=10
+max_connections=3000
+[common]
+mysql-max_connections=8000
+mysql-monitor_slave_lag_when_null=10
+mysql-monitor_username=proxysql
+mysql-monitor_password=proxysql
+
+
+
